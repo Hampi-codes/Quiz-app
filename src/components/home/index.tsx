@@ -1,32 +1,23 @@
-import {
-  Grid,
-  Button,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@mui/material";
+import { Grid, Button, FormControl, Select, MenuItem } from "@mui/material";
 import "./style.css";
 import { useState } from "react";
 import { categoryOptions, difficultyOptions } from "../../constants";
-import { fetchQuizData } from "../../api/api";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [category, setCategory] = useState("any");
   const [difficulty, setDifficulty] = useState("any");
 
+  const navigate = useNavigate();
+
   const handleStart = async (e: any) => {
     e.preventDefault();
-    try {
-      const quizData = await fetchQuizData(category, difficulty);
-      console.log(quizData);
-    } catch (error) {
-      console.error("Failed to fetch quiz data:", error);
-    }
+    navigate("/quiz", { state: { category, difficulty } });
   };
+
   return (
     <>
-      <Grid container>
+      <Grid className="home_container" container>
         <Grid className="home_heading_grid" item xs={12}>
           <h1>Welcome to Quizzy!</h1>
         </Grid>
@@ -42,17 +33,17 @@ const Home = () => {
             <Grid container gap={2} className="from_grid_container">
               <Grid item xs={10} sm={5.8} md={4} lg={3}>
                 <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-helper-label">
-                    Category
-                  </InputLabel>
                   <Select
+                    className="home_select"
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={category}
-                    label="Category"
                     onChange={(e) => setCategory(e.target.value)}
                     MenuProps={{
                       slotProps: { paper: { className: "category_menu" } },
+                    }}
+                    inputProps={{
+                      className: "category",
                     }}
                   >
                     {categoryOptions.map((category) => (
@@ -65,14 +56,11 @@ const Home = () => {
               </Grid>
               <Grid item xs={10} sm={5.8} md={4} lg={3}>
                 <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-helper-label">
-                    Difficulty
-                  </InputLabel>
                   <Select
+                    className="home_select"
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
                     value={difficulty}
-                    label="Difficulty"
                     onChange={(e) => setDifficulty(e.target.value)}
                   >
                     {difficultyOptions.map((difficulty) => (

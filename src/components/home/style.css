@@ -1,11 +1,21 @@
+.home_container {
+  background-image: url("../../assets/images/homeBackground.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  align-content: flex-start;
+}
+
 .home_heading_grid,
 .home_para_grid,
 .home_form_grid {
   display: flex;
   justify-content: center;
+  height: fit-content;
 }
 
-.home_para_grid{
+.home_para_grid {
   padding: 0 10px;
 }
 
@@ -27,8 +37,12 @@
   padding: 20px;
 }
 
-.category_menu{
-  max-height: 200px;
+.home_select{
+  background-color: #F5F7F8;
+}
+
+.category_menu {
+  max-height: 200px !important;
 }
 
 .category_menu::-webkit-scrollbar {
