@@ -1,5 +1,5 @@
 export const fetchQuizData = async (category: string, difficulty: string) => {
-    let url = `https://opentdb.com/api.php?amount=10`;
+    let url = `https://opentdb.com/api.php?amount=10&type=multiple`;
   
     if (category !== "any") {
       url += `&category=${category}`;
