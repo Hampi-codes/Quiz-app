@@ -1,0 +1,20 @@
+.header_img {
+  height: 30px;
+  width: 30px;
+  filter: drop-shadow(0px 0px 4px 12px yellow)
+}
+
+.header_grid {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #45474b;
+}
+
+.header_span {
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #F5F7F8;
+  cursor: default;
+}

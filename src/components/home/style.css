@@ -1,0 +1,46 @@
+.home_heading_grid,
+.home_para_grid,
+.home_form_grid {
+  display: flex;
+  justify-content: center;
+}
+
+.home_para_grid{
+  padding: 0 10px;
+}
+
+.home_form {
+  width: 100%;
+}
+
+.home_button_grid {
+  display: flex;
+  justify-content: center;
+}
+
+.start_Button {
+  background-color: #33b249 !important;
+}
+
+.from_grid_container {
+  justify-content: center;
+  padding: 20px;
+}
+
+.category_menu{
+  max-height: 200px;
+}
+
+.category_menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.category_menu::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+}
+
+.category_menu::-webkit-scrollbar-thumb {
+  background-color: #f4ce14;
+  border-radius: 10px;
+}
