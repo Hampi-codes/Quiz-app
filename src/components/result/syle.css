@@ -1,0 +1,8 @@
+.score_container {
+  width: 100%;
+}
+
+.score_buttons {
+  width: 100%;
+  max-width: 400px;
+}
