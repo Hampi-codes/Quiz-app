@@ -12,12 +12,12 @@ const Result = (props: any) => {
 
       <Grid item xs={12} className="score_buttons">
         <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={12} sm="auto">
+          <Grid item xs={10} sm="auto">
             <Button variant="contained" fullWidth onClick={handlePlayAgain}>
               Play Again
             </Button>
           </Grid>
-          <Grid item xs={12} sm="auto">
+          <Grid item xs={10} sm="auto">
             <Button variant="outlined" fullWidth onClick={handleHome}>
               Home
             </Button>
