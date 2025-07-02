@@ -14,6 +14,7 @@ const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [quited, setQuited] = useState(false);
 
   const handleAnswer = (selectedAnswer: string) => {
     if (selectedAnswer === questions[currentQuestionIndex].correct_answer) {
@@ -31,6 +32,7 @@ const Quiz = () => {
 
   const handleQuit = () => {
     setShowResult(true);
+    setQuited(true);
   };
 
   const handlePlayAgain = async () => {
@@ -54,6 +56,7 @@ const Quiz = () => {
     return (
       <Result
         score={score}
+        quited={quited}
         handlePlayAgain={handlePlayAgain}
         handleHome={() => navigate("/")}
       />

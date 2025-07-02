@@ -1,8 +1,17 @@
 .score_container {
-  width: 100%;
+  width: 100% !important;
+  min-height: calc(100vh - 57px);
+  justify-content: center;
 }
 
 .score_buttons {
   width: 100%;
   max-width: 400px;
+}
+
+.oops {
+  text-align: center;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }

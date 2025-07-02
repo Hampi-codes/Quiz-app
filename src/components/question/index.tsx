@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Grid,
@@ -19,6 +19,10 @@ const Question = (props: any) => {
     handleQuit,
   } = props;
   const [selectedAnswer, setSelectedAnswer] = useState("");
+
+  useEffect(() => {
+    setSelectedAnswer("");
+  }, [question]);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedAnswer((event.target as HTMLInputElement).value);
